@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/register.css" />
+    <title>Sign UP</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="register-container">
+      <div class="register-form">
+        <form action="">
+          <div class="name">
+            <h1>register-form</h1>
+          </div>
+          <div class="form-element">
+            <label for="name">Name</label>
+            <input type="text" name="name" value="" placeholder="Name" />
+          </div>
+          <div class="form-element">
+            <label for="email">Email</label>
+            <input type="email" name="email" value="" placeholder="Email" />
+          </div>
+          <div class="form-element">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              name="password"
+              value=""
+              placeholder="Password"
+            />
+          </div>
+          <div class="form-element">
+            <label for="mobile">Mobile :</label>
+            <input type="number" name="mobile" value="" placeholder="Mobile" />
+          </div>
+          <div class="button">
+            <input type="button" onclick="submitForm();" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script src="./js/register.js"></script>
+</html>
