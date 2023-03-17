@@ -1,3 +1,8 @@
+$(document).ready(function () {
+  if (localStorage.getItem("redisId")) {
+    window.location.replace("http://localhost/guvi/profile.html");
+  }
+});
 function submitForm() {
   var name = $("input[name=name]").val();
   var email = $("input[name=email]").val();
@@ -8,6 +13,8 @@ function submitForm() {
     email: email,
     password: password,
     phone: mobile,
+    dob:dob,
+    age:age,
   };
   console.log(formData);
   $.ajax({
@@ -18,5 +25,4 @@ function submitForm() {
       console.log(response);
     },
   });
-  //   alert(name);
 }

@@ -1,26 +1,28 @@
 $(document).ready(function () {
-  console.log("Hi");
+  if (localStorage.getItem("redisId")) {
+    window.location.replace("http://localhost/guvi/profile.html");
+  }
   $("#my-form").submit(function (event) {
     event.preventDefault();
-    let formData = {
-      email: $("#email").val(),
-      password: $("#password").val(),
-    };
     console.log(formData);
     $.ajax({
       type: "POST",
       url: "http://localhost/guvi/php/login.php",
-      data: formData,
+      data: {
+        email: $("#email").val(),
+        password: $("#password").val(),
+      },
 
       success: function (res) {
-        res = JSON.parse(res);
-        console.log(res);
-        if (res.status == "success") {
-          window.location.replace("http://localhost/guvi/register.html");
+        response = JSON.parse(res);
+        if (response.status == "success") {
+          localStorage.setItem("redisId", response.session_id);
+          if (localStorage.getItem("redisId") != null)
+            window.location.replace("http://localhost/guvi/profile.html");
         }
       },
       error: function (jqXHR, textStatus, errorThrown) {
-        console.log(errorThrown); // log error message to console
+        console.log(errorThrown);
       },
     });
   });

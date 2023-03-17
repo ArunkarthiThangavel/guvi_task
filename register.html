@@ -17,13 +17,20 @@
           </div>
           <div class="form-element">
             <label for="name">Name</label>
-            <input type="text" name="name" value="arun" placeholder="Name" />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              value="arun"
+              placeholder="Name"
+            />
           </div>
           <div class="form-element">
             <label for="email">Email</label>
             <input
               type="email"
               name="email"
+              id="email"
               value="a@gmail.com"
               placeholder="Email"
             />
@@ -33,6 +40,7 @@
             <input
               type="password"
               name="password"
+              id="password"
               value="123"
               placeholder="Password"
             />
@@ -42,18 +50,39 @@
             <input
               type="number"
               name="mobile"
+              id="mobile"
               value="1234567890"
               placeholder="Mobile"
             />
           </div>
+          <div class="form-element">
+            <label for="dob">DOB </label>
+            <input
+              type="date"
+              name="dob"
+              id="dob"
+            />
+          </div>
+          <div class="form-element">
+            <label for="age">Age </label>
+            <input
+              type="number"
+              name="age"
+              id="age"
+            />
+          </div>
           <div class="grid">
-            <input type="button" onclick="submitForm()" class="register-btn" value="Submit" />
-            <!-- <input type="register-btn" onclick="submitForm();" value="Submit" /> -->
-            <!-- <button class="register-btn" type="submit">button</button> -->
+            <p>Already have an account:<a href="http://localhost/guvi/login.html">Login</a></p>
+            <input
+              type="button"
+              onclick="submitForm()"
+              class="register-btn"
+              value="Submit"
+            />
           </div>
         </form>
       </div>
     </div>
-    <script src="./js/register.js"></script>
   </body>
+  <script src="./js/register.js"></script>
 </html>
