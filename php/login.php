@@ -11,14 +11,13 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// $email = $_POST["email"];
-$email = 'a@gmail.com';
-// $password = $_POST["password"];
-// print_r($conn);
-$result = mysqli_query($conn, "SELECT * FROM register WHERE email = '$email'");
-print_r($email);
-print_r($result.length);
 
+$email = $_POST["email"];
+$email = 'a@gmail.com';
+print $email;
+$password = $_POST["password"];
+$result = mysqli_query($conn, "SELECT * FROM register WHERE email = '$email'");
+print $result;
 if (mysqli_num_rows($result) == 0) {
     $response = array(
         "status" => "error",
@@ -28,7 +27,7 @@ if (mysqli_num_rows($result) == 0) {
 } else {
     $row = mysqli_fetch_assoc($result);
     
-    if(password_verify($password, $row['password'])){
+    if($password==$row['password']){
         $payload = array(
             "email" => $row['email'],
             "expires_at" => time() + 3600 // Expires in 1 hour

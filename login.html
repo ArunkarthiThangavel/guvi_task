@@ -9,40 +9,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
   <body>
-    <div class="login-box">
-      <h2>Login</h2>
-      <form id="my-form">
-        <div class="user-box">
-          <input
-            type="email"
-            class="form-input"
-            id="email"
-            name="email"
-            placeholder="name@example.com"
-            value="a@gmail.com"
-          />
-          <label>Username</label>
-        </div>
-        <div class="user-box">
-          <input
-            type="password"
-            class="form-input"
-            id="password"
-            name="password"
-            placeholder="Password"
-            value="Arun"
-          />
-          <label>Password</label>
-        </div>
-        <!-- <a href="#">
-             <span></span>
-         <span></span>
-      <span></span>
-      <span></span>
-          Submit 
-        </a>-->
-        <button type="submit">Submit</button>
-      </form>
+    <div class="center">
+      <div class="login-box">
+        <h2>Login</h2>
+        <form id="my-form">
+          <div class="user-box">
+            <input type="email" class="form-input" id="email" name="email" />
+            <label>Username</label>
+          </div>
+          <div class="user-box">
+            <input
+              type="password"
+              class="form-input"
+              id="password"
+              name="password"
+            />
+            <label>Password</label>
+          </div>
+          <div class="grid">
+            <button class="login-btn" type="submit">Login</button>
+          </div>
+        </form>
+      </div>
     </div>
   </body>
   <script src="./js/login.js" defer></script>

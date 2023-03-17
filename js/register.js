@@ -9,14 +9,14 @@ function submitForm() {
     password: password,
     phone: mobile,
   };
+  console.log(formData);
   $.ajax({
     url: "http://localhost/guvi/php/register.php",
     type: "POST",
     data: formData,
     sucess: function (response) {
-      console.log(response)
+      console.log(response);
     },
   });
-  console.log(formData);
-//   alert(name);
+  //   alert(name);
 }

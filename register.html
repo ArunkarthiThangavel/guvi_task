@@ -11,37 +11,49 @@
   <body>
     <div class="register-container">
       <div class="register-form">
-        <form action="">
+        <form>
           <div class="name">
-            <h1>register-form</h1>
+            <h1>Register-Form</h1>
           </div>
           <div class="form-element">
             <label for="name">Name</label>
-            <input type="text" name="name" value="" placeholder="Name" />
+            <input type="text" name="name" value="arun" placeholder="Name" />
           </div>
           <div class="form-element">
             <label for="email">Email</label>
-            <input type="email" name="email" value="" placeholder="Email" />
+            <input
+              type="email"
+              name="email"
+              value="a@gmail.com"
+              placeholder="Email"
+            />
           </div>
           <div class="form-element">
             <label for="password">Password</label>
             <input
               type="password"
               name="password"
-              value=""
+              value="123"
               placeholder="Password"
             />
           </div>
           <div class="form-element">
-            <label for="mobile">Mobile :</label>
-            <input type="number" name="mobile" value="" placeholder="Mobile" />
+            <label for="mobile">Mobile </label>
+            <input
+              type="number"
+              name="mobile"
+              value="1234567890"
+              placeholder="Mobile"
+            />
           </div>
-          <div class="button">
-            <input type="button" onclick="submitForm();" value="Submit" />
+          <div class="grid">
+            <input type="button" onclick="submitForm()" class="register-btn" value="Submit" />
+            <!-- <input type="register-btn" onclick="submitForm();" value="Submit" /> -->
+            <!-- <button class="register-btn" type="submit">button</button> -->
           </div>
         </form>
       </div>
     </div>
+    <script src="./js/register.js"></script>
   </body>
-  <script src="./js/register.js"></script>
 </html>
