@@ -88,6 +88,10 @@ body{
   transform: scale(1.1);
 }
 
+.reg-btn{
+  color: #fff;
+}
+
 @media (max-width: 400px) {
   .login-box {
     width: 100%;
